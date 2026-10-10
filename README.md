@@ -3,6 +3,8 @@
 Upload a photo of a printed circuit board and the model finds and labels manufacturing defects.
 It detects 6 defect types: missing hole, mouse bite, open circuit, short, spur and spurious copper.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gladwinbrittoarakkal-crypto/PCB-Defect-Detection/blob/main/demo.ipynb)
+
 ![example 1](results/example_1.jpg)
 ![example 2](results/example_2.jpg)
 ![example 3](results/example_3.jpg)
@@ -39,7 +41,12 @@ train 481 images (boards 01, 04, 06, 07, 08, 09), validation 92 (boards 05, 10),
 - Horizontal flip augmentation; the best checkpoint is chosen by validation mAP@50
 - Trained on a free Google Colab T4 GPU
 
+
 ## Run the demo
+
+Quickest way: click the Open in Colab badge at the top, then choose Runtime > Run all.
+
+Or run it locally:
 
 ```
 pip install -r requirements.txt
@@ -47,14 +54,14 @@ python app.py
 ```
 
 Then open the local link, upload a PCB image, and adjust the confidence slider.
-The weights in models/best.pt are stored mostly in half precision (normalisation layers kept in full precision) to stay under GitHub's file size limit.
+
 
 ## Files
 
 - app.py: Gradio web demo
 - pcb_core.py: model, dataset and drawing code
 - models/best.pt: trained weights
-- notebooks/: Colab notebook used for training and evaluation
+- demo.ipynb: one-click Colab demo (Run all, then upload an image)
 - results/: example detections
 
 ## Limitations
