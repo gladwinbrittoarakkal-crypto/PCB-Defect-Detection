@@ -1,0 +1,7 @@
+torch
+torchvision
+gradio
+pillow
+pandas
+torchmetrics
+pycocotools
