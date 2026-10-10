@@ -5,6 +5,7 @@ It detects 6 defect types: missing hole, mouse bite, open circuit, short, spur a
 
 ![example 1](results/example_1.jpg)
 ![example 2](results/example_2.jpg)
+![example 3](results/example_3.jpg)
 
 ## Results (held-out test boards)
 
